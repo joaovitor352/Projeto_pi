@@ -1,0 +1,125 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Altera o layout para coluna */
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+/* Header */
+header {
+    background-color: #333; /* Cor de fundo do header */
+    color: #fff; /* Cor do texto */
+    padding: 15px 0; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Ocupa toda a largura da tela */
+}
+
+.links {
+    display: flex;
+    justify-content: space-between; /* Alinha o título e a nav */
+    align-items: center; /* Centraliza verticalmente */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Espaçamento interno */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; /* Tamanho do título */
+    font-weight: bold;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinha os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+nav ul li a:hover {
+    color: #0073e6; /* Cor ao passar o mouse */
+}
+
+/* Container do Slider */
+.container {
+    width: 80%;
+    width: 250px;
+    overflow: hidden;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espaçamento acima do slider */
+}
+
+/* Slider de Imagens */
+.slider {
+    display: flex;
+    width: 300%; /* 4 imagens = 400% */
+    animation: slide 15s infinite;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .links {
+        flex-direction: column; /* Empilha o título e a nav em telas pequenas */
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os links em telas pequenas */
+        gap: 10px; /* Reduz o espaçamento entre os links */
+    }
+
+    header h1 {
+        margin-bottom: 10px; /* Espaçamento abaixo do título */
+    }
+
+    .container {
+        width: 90%; /* Aumenta a largura do container em telas pequenas */
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 250px;
+    margin-top: 190px;
+}
+
+footer p {
+    margin: 0;
+}
